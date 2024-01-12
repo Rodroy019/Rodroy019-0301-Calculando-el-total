@@ -24,25 +24,30 @@
                 <p>Cantidad:
                 <button id="btnRestar" onclick="
                     cantidadInicial = document.querySelector('.cantidad');
-                    nuevaCantidad = Number(cantidadInicial.innerHTML);
-                    nuevaCantidad = nuevaCantidad - 1;
+                    nuevaCantidad = Number(cantidadInicial.innerHTML) - 1;
                     if (nuevaCantidad < 0){nuevaCantidad = 0;}
                     cantidadInicial.innerHTML = nuevaCantidad;
-                    ">-</button>
+
+                    valorTotal = document.querySelector('.valor-total');
+                    nuevoTotal = precio * nuevaCantidad;
+                    valorTotal.innerHTML = nuevoTotal;
+                ">-</button>
                 <span class="cantidad">0</span>
                 <button id="btnSumar" onclick="
-                cantidadInicial = document.querySelector('.cantidad');
-                nuevaCantidad = Number(cantidadInicial.innerHTML);
-                nuevaCantidad = nuevaCantidad + 1;
-                cantidadInicial.innerHTML = nuevaCantidad;
+                    cantidadInicial = document.querySelector('.cantidad');
+                    nuevaCantidad = Number(cantidadInicial.innerHTML) + 1;
+                    cantidadInicial.innerHTML = nuevaCantidad;
+
+                    valorTotal = document.querySelector('.valor-total');
+                    nuevoTotal = precio * nuevaCantidad;
+                    valorTotal.innerHTML = nuevoTotal;
                 ">+</button>
               </p>
             </div>
         </div>
     </section>
-
     <div class="total-section">
-        <p>Total a pagar: $<span class="valor-total"></span> </p>
+        <p>Total a pagar: $<span class="valor-total"></span></p>
     </div>
 
     <script src="index.js"></script>
