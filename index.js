@@ -1,4 +1,7 @@
-precio = 400000
+const precio = 400000;
+let total = 0;
 
 precioSpan = document.querySelector(".precio-inicial");
-precioSpan.innerHTML = precio
+precioSpan.innerHTML = precio;
+totalSpan = document.querySelector(".valor-total");
+totalSpan.innerHTML = total;
