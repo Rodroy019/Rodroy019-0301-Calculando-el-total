@@ -13,41 +13,19 @@
 
     <section>
         <div class="card">
-            <div class="img-card"></div>
+            <div class="imgCard"></div>
                 <h3>Laptop Gamer AMD</h3>
-                <select id="selector">
-                    <option value="black">Negro</option> 
-                    <option value="red">Rojo</option> 
-                    <option value="blue">Azul</option>
-                </select>
-                <p>Precio: $<span class="precio-inicial"></span> </p>
+                <p>Precio: $<span id="precioInicial"></span> </p>
                 <p>Cantidad:
-                <button id="btnRestar" onclick="
-                    cantidadInicial = document.querySelector('.cantidad');
-                    nuevaCantidad = Number(cantidadInicial.innerHTML) - 1;
-                    if (nuevaCantidad < 0){nuevaCantidad = 0;}
-                    cantidadInicial.innerHTML = nuevaCantidad;
-
-                    valorTotal = document.querySelector('.valor-total');
-                    nuevoTotal = precio * nuevaCantidad;
-                    valorTotal.innerHTML = nuevoTotal;
-                ">-</button>
-                <span class="cantidad">0</span>
-                <button id="btnSumar" onclick="
-                    cantidadInicial = document.querySelector('.cantidad');
-                    nuevaCantidad = Number(cantidadInicial.innerHTML) + 1;
-                    cantidadInicial.innerHTML = nuevaCantidad;
-
-                    valorTotal = document.querySelector('.valor-total');
-                    nuevoTotal = precio * nuevaCantidad;
-                    valorTotal.innerHTML = nuevoTotal;
-                ">+</button>
+                <button id="btnMinus">-</button>
+                <span id="cantidad">0</span>
+                <button id="btnPlus">+</button>
               </p>
             </div>
         </div>
     </section>
-    <div class="total-section">
-        <p>Total a pagar: $<span class="valor-total"></span></p>
+    <div class="totalSection">
+        <p>Total a pagar: $ <span id="valorTotal"></span></p>
     </div>
 
     <script src="index.js"></script>
